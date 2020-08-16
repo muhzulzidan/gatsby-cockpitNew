@@ -1,3 +1,3 @@
 # gatsby-cockpitNew
 
-this is a minimal production of my original blog
+this is a minimal reproduction of my original website muhzulzidan.com
