@@ -1,2 +1,3 @@
 # gatsby-cockpitNew
-the other one is deprecated
+
+this is a minimal production of my original blog
