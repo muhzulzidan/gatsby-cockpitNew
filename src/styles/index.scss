@@ -1,0 +1,115 @@
+// base
+
+@import "base/normalise";
+@import "base/variable";
+@import "base/theme";
+@import "base/mixin";
+@import "base/font";
+@import "base/bp";
+@import "base/color";
+
+
+// page
+
+@import "page/cari";
+@import "page/markdown";
+@import "page/paginate";
+@import "page/tim";
+@import "page/contactUs";
+
+// components
+
+@import "components/link";
+@import "components/sub";
+@import "components/icon";
+@import "components/modal";
+@import "components/pager";
+@import "components/footer";
+
+@import "components/layout";
+@import "components/sound";
+@import "components/comments";
+@import "components/menu";
+@import "components/react-select";
+@import "components/layanan";
+
+
+body .toc {
+    margin-bottom: 1em;
+    border-bottom: .1em solid $blue;
+  }
+body .toc p, .toc li    {
+    margin-bottom: .5em;
+} 
+
+/* purgecss start ignore */
+// scrollbar
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @include themed() {
+    background: t($modal);
+  }
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+   @include themed() {
+     background: t($text);
+   }
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @include themed() {
+    background: t($text);
+  }
+}
+/* purgecss end ignore */
+
+.single-pages{
+  padding-left: 2em;
+  padding-right: 2em;
+  p, h1, h2, h3, h4, h5 {
+    @include themed() {
+      color: t($text);
+    }
+  }
+}
+@include bp("small"){
+  .single-pages{
+    padding-left: $calc-layout-header-logo2;
+    padding-right: $calc-layout-header-theme1;
+  }
+}
+@media (min-width: 800px) {
+  .single-pages {
+    padding-left: $calc-layout-header-logo2
+  }
+
+}
+@include bp("medium") {
+  .single-pages {
+    padding-left: $calc-layout-header-logo3;
+    padding-right: $calc-layout-header-theme2;
+  }
+
+}
+
+
+@include bp ("larger") {
+  html{
+      font-size: 140%;
+  }
+}
+
+
+   
+
+

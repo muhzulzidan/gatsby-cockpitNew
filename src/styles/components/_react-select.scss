@@ -1,0 +1,71 @@
+/* purgecss start ignore */
+
+.react-select-container{
+    width: 7em;
+    padding-right: 1em;
+    .react-select__control{
+        @include themed() {
+            background-color: t(bg);
+        }
+        &--is-focused{
+            @include themed() {
+                border-color: t(link2);
+                box-shadow: 0 0 0 1px t(link2);
+                background-color: t(modal);
+            }
+        }
+        .react-select__value-container {
+            .react-select__single-value {
+                 @include themed() {
+                     color: t(text);
+                 }
+            }
+        }
+        .react-select__indicators{
+            .react-select__indicator{
+                
+                &:hover{
+                    @include themed() {
+                        color: t(text);
+                    }
+                }
+            }
+        }
+    }
+    .react-select__menu {
+        @include themed() {
+            background-color: t(bg);
+        }
+        box-shadow: -2px 6px 20px 1px #0000002b;
+    }
+    .react-select__menu-list{
+        overflow-x: hidden;
+        overflow-wrap: break-word;
+        .react-select__option {
+            @include themed() {
+                color: t(text);
+            }
+            &--is-selected {
+                @include themed() {
+                    color: t(bg);
+                    background-color: t(text);
+                }
+            }
+            &--is-focused{
+             @include themed() {
+                 color: t(bg);
+                 background-color: t(hover);
+             }
+            }
+            
+        }
+        
+    }
+}
+@include bp("small") {
+    .react-select-container {
+        width: 10em;
+    }
+}
+
+/* purgecss end ignore */

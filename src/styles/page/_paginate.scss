@@ -1,0 +1,139 @@
+// @import "../base/variable";
+@mixin height-min {
+    min-height: min-content;
+    height: min-content;
+}
+@mixin height-max {
+    height: max-content;
+    max-height: max-content;
+}
+.paginate-h1{
+    margin: 0;
+    padding-left: .5em ;
+    padding-bottom: .5em;
+    padding-top: .5em;
+   
+}
+.paginate-name-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     @include themed() {
+         background-color: t(text);
+         color: t(bg);
+     }
+}
+
+.paginate-ul {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    list-style: none;
+}
+.paginate-li{
+    margin: 0;
+    display: flex;
+    border-bottom: 1px solid;
+    @include themed(){
+        border-color: t($text);
+    }
+    @include height-min;
+}
+.paginate-link {
+    height: min-content;
+    margin: 1.5em;
+    @include flex-column;
+    @include themed() {
+        color: t($text);
+      }
+}
+@mixin paginate-widthe-img-div2 {
+    width: calc(100vw - 4em);
+}
+.paginate-img {
+    @include paginate-widthe-img-div2;
+    margin-bottom: 1em;
+}
+.paginate-div2 {
+    @include flex-column;
+    @include paginate-widthe-img-div2;
+    height: 10rem;
+    min-height: max-content;
+
+}
+.paginate-div3 {
+    display: flex;
+    font-size: 1rem;
+    font-family: "Lora";
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box; 
+    line-height: 1.5;  
+    max-height: 5rem;       
+    -webkit-line-clamp: 5;  
+    -webkit-box-orient: vertical; 
+    @include themed() {
+        color:t($text);
+    }
+}
+.paginate-div3 > p > a {
+    display: none;
+}
+.paginate-h3 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 900;
+    @include themed() {
+        color:t($text);
+    }
+}
+.paginate-written {
+    margin: 0;
+    font-size: .8rem;
+    opacity: .7;
+    @include themed() {
+        color:t($text);
+    }
+}
+@mixin paginate-h3-div3-width {
+    width: calc(60vw - 4em);
+}
+@include bp("small"){
+    .paginate-div3 {
+        overflow: hidden;
+        font-size: 1.2rem;
+        text-overflow: ellipsis; 
+        display: flex; 
+        line-height: 1.5;  
+        height: 15rem;      
+        -webkit-line-clamp: none;   
+        -webkit-box-orient: none; 
+            p {
+            max-height: 6rem;
+        }
+        @include paginate-h3-div3-width;
+    }
+    .paginate-link{
+        display: flex;
+        flex-direction: row;
+    }
+    .paginate-img {
+        width: 9em;
+        margin-right: 1.5em;
+        padding: 3rem;
+    }
+    .paginate-div2 {
+        @include paginate-h3-div3-width;
+    } 
+    .paginate-h3 {
+        @include paginate-h3-div3-width;
+        font-size: 1.8em;
+    }
+    .paginate-written {
+        font-size: 1rem;
+        @include paginate-h3-div3-width;
+    }
+}
+
+
+

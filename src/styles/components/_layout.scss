@@ -1,0 +1,67 @@
+@import "./layoutHeader";
+
+
+
+.layout-link {
+    height: max-content;
+    border-radius: .6rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: grid;
+    text-align: center;
+    padding:1rem;
+    margin-top: 1rem;
+    box-shadow: none;
+    text-decoration: none;
+    width: 15em;
+    @include themed(){
+        color: t(text);
+    }
+}
+.layout-basediv{
+    box-shadow: 1px -1px 20px 6px rgba(0,0,0,.58);
+    @include themed(){
+        background-color: t(bg);
+    }
+}
+@media screen and (min-width: 300px) {
+    .layout-link {
+        width: 16em;
+        font-size: 1.5rem;
+    }
+}
+@media screen and (min-width: 600px) {
+    .layout-link {
+        width: 15em;
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width: 800px) {
+    .layout-link {
+        width: 13em;
+        font-size: 1.6rem;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .layout-link {
+    font-size: 3rem;
+    border-radius: 1.5rem;
+    margin-top: 4rem;
+    width: 13em;
+    font-size: 1.9rem;
+    }
+    
+}
+@media screen and (min-width: 1200px) {
+    .layout-link {
+    font-size: 3rem;
+    border-radius: 1.5rem;
+    margin-top: 10rem;
+    width: 15em;
+    font-size: 2.2rem;
+    }
+    
+}
+
+
+

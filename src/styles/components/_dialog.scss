@@ -1,0 +1,93 @@
+.a2{
+    width: 80%;
+   height: 80rem;
+   margin-top: 0;
+   margin-right: 0;
+}
+.a2{
+   max-width: 90vw;
+   left: auto;
+   line-height: 1.5;
+}
+.modal-div h3{
+   margin: 0;
+   font-weight: 500;
+}
+.modal-div{
+   right: 0;
+   font-weight: 600;
+   overflow: auto;
+}
+.dialoga4{
+   padding-top: 1em;
+   display: flex;
+}
+.a4{
+   
+   padding-top: 1em;
+   display: flex;
+}
+@media screen and (min-width: 300px) {
+   .a4{
+       position: relative;
+   left: 30px;
+   }
+   .dialoga4{
+       position: relative;
+   left: 30px;
+   }
+   .a2{
+       
+       width: 20rem;
+   }
+}
+@media screen and (min-width: 400px) {
+   /* .a4{
+       
+       left: 50px;
+   } */
+   .a2{
+       
+       width: 20rem;
+   }
+}
+@media screen and (min-width: 600px) {
+   /* .a4{
+       
+       left: 80px;
+   } */
+   .a2{
+       
+       width: 30rem;
+   }
+}
+@media screen and (min-width: 1000px) {
+
+   .a2{
+       
+       width: 30rem;
+   }
+}
+@media screen and (min-width: 1200px) {
+
+   .a2{
+       height: 100%;
+       width: 50vw;
+   }
+}
+
+@keyframes modal-div {
+   0% {
+     opacity: 0;
+     transform: translateY(-10px);
+   }
+   100% {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+ .modal-div[data-reach-menu-list],
+ .modal-div[data-reach-menu-items] {
+   border-radius: 5px;
+   animation: slide-down 0.2s ease;
+ }

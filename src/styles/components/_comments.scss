@@ -1,0 +1,138 @@
+.comments-hubungidiv{
+    @include flex-center;
+}
+.comments-icon {
+    display: none;
+}
+.comments-kembali{
+        @include themed(){
+            color: t(text);
+        }
+        &:hover{
+        color:var(--red);
+        @include themed(){
+            color: t(hover);
+        }
+    }
+}
+@mixin comment-input-textarea {
+    background-color: transparent;
+    border:none;
+    width: 100%;
+    border-bottom: 1px solid;
+    @include themed(){
+        border-color: t(text);
+    }
+}
+
+.comments-form {
+    label {
+        margin-bottom: 1em;
+    }
+    input{
+        display: flex;
+        padding: .3em;
+        margin-bottom: .8em;
+        margin-top: .5em;
+        @include themed(){
+            color: t(text);
+        }
+        @include comment-input-textarea;
+    }
+    textarea{
+        @include comment-input-textarea;
+    }
+    .comments-submitdisable, .comments-submit{
+        @include submit;
+    }
+    .comments-submit{
+        @include submit;
+        opacity: 1;
+    }
+}
+.comments-form {
+    .comments-submit{
+        border: none;
+        padding: .5em;
+        width: 16em;
+        margin-top: 1em;
+        height: 3em;
+        align-self: center;
+        justify-content: center;
+        cursor: pointer;
+        @include themed(){
+            background-color: t(text);
+            color: t(bg);
+        }
+        &:hover{
+            @include themed(){
+                color: t(bg);
+                background-color: t(hover);
+            }
+        }
+    }
+}
+
+
+.comments-form textarea, .form textarea:-webkit-autofill{
+    overflow-y: hidden;
+    resize: none;
+    padding: 0.3em;
+    @include themed(){
+        color: t(text);
+    }
+}
+
+.comments-div{
+    @include themed(){
+        color: t(text);
+    }
+
+}
+
+.comments-div1{
+    @include margin-auto;
+}
+
+
+
+.comments-hubungi {
+    font-size:3em;
+
+}
+
+
+.comments-head1{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+}
+.comments-p{
+    padding-left: .6em;
+    font-size: 1em;
+}
+.comments-p1{
+    margin: 0;
+    align-self: flex-start;
+}
+
+@media (min-width: 350px) {
+.comments-head{
+    font-size: 1.6em;
+}
+.comments-p{
+    font-size: 1em;
+}
+.comments-email{
+    width: 19em;
+}
+.comments-submit{
+    width: 19em;
+}
+.comments-submitdisable{
+    width: 19em;
+}
+    
+  }
+
+

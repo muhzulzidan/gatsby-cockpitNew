@@ -1,0 +1,43 @@
+
+  .menu-button{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    
+    border-radius: .4rem;
+    font-size: 1.7rem;
+      svg{
+        @include themed(){
+          color: t(text);
+        }
+      }
+  }
+  
+  .search1{
+    outline: none;
+    background-color: var(--cream3);
+    border: none;
+    box-shadow: none;
+    padding: .2rem;
+    border-radius: .4rem;
+    font-size: 2rem;
+  }
+  .search2 {
+    margin-top: .5rem;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    width: 2.5rem;
+  }
+
+@include bp("small"){
+  .menu-button{
+    font-size: 1.7em;
+    }
+}
+@include bp("medium"){
+  .menu-button{
+    display: none;
+    }
+}

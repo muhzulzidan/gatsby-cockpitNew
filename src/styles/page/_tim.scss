@@ -1,0 +1,141 @@
+
+
+
+@mixin tim-divs {
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    height: 99vh;
+}
+.tim-div{
+    scroll-snap-type: y mandatory;
+    div {
+
+        scroll-snap-align: start;
+        scroll-snap-stop: normal;
+    }
+}
+.tim-div1{
+    @include tim-divs;
+}
+.tim-div2{
+    @include tim-divs;
+}
+.tim-head1{
+    font-size: 5em;
+    margin: 0;
+}
+.tim-ul{
+    scroll-snap-align: start;
+    margin: 0;
+    height: 99vh;
+}
+.tim-p{
+    margin: 0;
+}
+.tim-p1{
+    margin:0;
+    text-align: center; 
+    max-width: 19em; 
+}
+.tim-paralayer  h3 {
+    font-size: 100%;
+}
+.tim-paralayer  svg {
+    color: var(--blue);
+}
+.tim-button {
+    @include tbnone;
+    @include themed() {
+        background-color: t($text);
+        color:t($bg)
+      }
+    // background-color: var(--blue);
+    // color: var(--cream);
+    padding: 1em;
+    border-radius: .5em;
+    &:hover {
+        // background-color: var(--red);
+        // color: var(--cream);
+        @include themed() {
+            background-color: t($link);
+            color:t($bg)
+          }
+    }
+}
+.tim-halamanUtama{
+    text-align: center;
+    margin-top:15em;
+}
+
+.tim-paralax{
+    @include themed() {
+        color:t($text);
+        background-color: t(bg);
+      }
+    /* font-family: "Poppins", sans-serif; */
+}
+.tim-paralax > div >div >div{
+    height: min-content;
+}
+.tim-paralayer{
+    @include themed() {
+        color:t($text)
+      }
+      @include flex-center;
+}
+
+.tim-icon{
+    display: flex;
+    margin-top: 1rem;
+        a{
+            margin-left: 1rem;
+            &:nth-child(1){
+                margin-left: 0;
+            }
+            svg{
+                font-size: 2rem;
+                @include themed() {
+                    color:t($text)
+                  }  
+                &:hover{
+                    transition-duration: .2s;
+                    @include themed() {
+                        color:t($link)
+                      }    
+                }  
+            }
+        }
+}
+
+@include bp("smaller") {
+    .halamanUtama{
+        margin-top:12em;
+    }
+}
+@include bp("small"){
+    .tim-icon >a:nth-child(1){
+        margin-left: 1rem;
+    }
+    .tim-paralayer  h3 {
+        font-size: 110%;
+    }
+    .tim-paralax > div >div >div:nth-child(1){
+        margin-bottom: 8em;
+    }
+    .tim-halamanUtama{
+        margin-left: .5em;
+        margin-top:10em;
+    }
+    .tim-paralax{
+        font-size: 120% ;
+    }
+}
+
+@include bp("medium"){
+    .tim-paralayer  h3 {
+        font-size: 120%;
+    }
+}
+

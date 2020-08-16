@@ -1,0 +1,26 @@
+
+.pager-nav{
+    display: flex;
+    justify-content: space-between;
+    h4{
+        padding-left: .5em;
+        padding-right: .5em;
+        margin: 0;
+        font-size: 1.1em;
+        
+    }
+    a{
+        display: inline-flex;
+        align-items: center;
+        padding: 1em;
+        &:hover{
+            @include themed(){
+                background-color: t(text);
+                color: t(bg);
+            }
+        }
+    }
+    .pager-next-div{
+
+    }
+}

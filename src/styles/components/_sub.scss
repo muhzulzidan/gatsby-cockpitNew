@@ -1,0 +1,110 @@
+.subscribe-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @include themed(){
+        color: t(text);
+    }
+}
+.subscribe-div1, .subscribe-head1{
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subscribe-form{
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-weight: 400;
+}
+.subscribe-email{
+    height: 2em;
+    display: flex;
+    padding: .5em;
+    width: 15em;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    margin: 0;
+    border: .1em solid;
+    @include themed(){
+        color: t(text);
+        border-color: t(text) ;
+    }
+}
+.subscribe-head{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+.subscribe-p{
+    font-size: 1em;
+}
+.subscribe-submit{
+    @include submit;
+    opacity: 1;
+    &:hover{
+        @include themed(){
+            background-color: t(hover);
+            color: t(bg);
+        }
+        
+    }
+}
+
+.subscribe-submitdisable{
+    @include submit;
+   
+}
+@media (min-width: 350px) {
+    .subscribe-head{
+        font-size: 1.56em;
+    }
+    .subscribe-p{
+        font-size: 1em;
+    }
+    
+  }
+@media (min-width: 600px) {
+    .subscribe-div{
+        align-items: flex-start;
+    }
+    .subscribe-form{
+        display: initial;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .subscribe-head{
+        justify-content: start;
+        font-size: 2em;
+    }
+    .subscribe-p{
+        padding-left: 0;
+        font-size: 1em;
+    }
+    .subscribe-email{
+        display: initial;
+        margin-bottom: 0rem;
+        margin-right: 1em;
+    }
+  }
+  @media (min-width: 700px) {
+    .subscribe-div1,  .subscribe-head1{
+        margin: 0;
+        margin-left: 15%;
+        width: 70%;
+    }
+}
+
+  @media (min-width: 900px) {
+    .subscribe-div1,  .subscribe-head1{
+        margin-left: 20%;
+    }
+
+  }

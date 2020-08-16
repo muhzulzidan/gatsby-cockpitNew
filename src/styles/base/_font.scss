@@ -1,0 +1,21 @@
+
+* {
+    font-family: "Roboto", sans-serif;
+    // color: $textColor;
+    line-height: 1.5;
+    p,li {
+      font-size: 90%;
+      line-height: 1.75;
+      font-family: 'Lora', serif;
+    }
+    blockquote {
+      font-family: 'Lora', serif;
+      line-height: 1.5rem;
+    }  
+  }
+  li{
+    margin-bottom: .5em;
+  }
+  button{
+    cursor: pointer;
+  }

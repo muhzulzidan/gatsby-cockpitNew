@@ -1,0 +1,203 @@
+.layout-header-shadow{
+    box-shadow: -2px -18px 16px 20px #000;
+}
+.layout-header{
+    display: flex;
+    position: relative;
+    z-index: 2;
+    
+    margin: 0;
+    padding-top: 1rem;
+    // margin-bottom: 1em;
+    border-bottom: 2px solid;
+    height: max-content;
+    padding-left: 1em;
+    height: 4em;
+    @include themed() {
+        border-color: t($text);
+      }
+    .layout-header1{
+        display: 1em;
+        margin-top: 0px;
+        margin-bottom: 1rem;
+        width: max-content;
+        display: flex;
+        .layout-header-menudiv{
+            padding-top: .3em;
+            position: absolute;
+            right: 20px;
+         }
+        .layout-header-logo-a{
+            @include themed() {
+                color: t($link);
+            }
+            font-size: 1.5rem;
+            display: flex;
+            align-self: center;
+            width: max-content;
+            border-radius: 1rem;
+            &:hover{
+                transition-duration: .2s;
+                @include themed() {
+                    color: t($hover);
+                  }
+            }
+        }
+        .layout-header-logo-div{
+            width: 1em;
+        }
+    }
+
+    .layout-header-homenavdiv{
+        display: none;
+        justify-content: space-evenly;
+        width: 16em;
+        margin-left: 1.5em;
+    }
+}
+@mixin themeToggler {
+    font-size:1.5em;
+    margin-left:.5em;
+    label{
+        cursor: pointer;
+    }
+    @include themed(){
+        color: t(text);
+    }
+}
+.layout-header-themeToggler{
+    @include themeToggler;
+}
+.layout-header-themeToggler-inpages{
+    @include themeToggler;
+    position: absolute;
+    right: .5em;
+}
+.layout-header-logo-kembali-inpages{
+    display: flex;
+    position: absolute;
+    left: .5em;
+}
+
+.layout-header-link-kembali{
+    display: none;
+    width: max-content;
+    @include themed(){
+        color: t(text);
+    }
+    &:hover{
+        @include themed(){
+            color: t(hover);
+        }
+    }
+}
+
+$calc-layout-header1 : calc(30vw - 10em);
+$calc-layout-header2 : calc(25vw - 10em);
+$calc-layout-header-theme1 : calc(38vw - 10em);
+$calc-layout-header-theme2 : calc(42vw - 10em);
+
+$calc-layout-header-logo1 : calc(20vw - 3em);
+$calc-layout-header-logo2 : calc(26vw - 8em);
+$calc-layout-header-logo3 : calc(30vw - 8em);
+
+@include bp("smaller"){
+    .layout-header-link-kembali{
+        display: inline-block;
+        padding-left: 1em;
+        @include themed(){
+            color: t(text);
+        }
+        h3{
+            margin: 0;
+        }
+    }
+}
+@include bp("small"){
+    // .layout-header-markdown{
+    //     padding-left: $calc-layout-header2;
+    // }
+    .layout-header-themeToggler-inpages{
+        right: $calc-layout-header-theme1;
+    }
+    // .layout-header-logo-kembali-inpages{
+    //     left: $calc-layout-header-logo3;
+    // }
+    .layout-header{
+        .layout-header1{
+            .layout-header-menudiv{
+                padding-top: 0em;
+                display: none;
+             }
+        }
+    }
+    .layout-header-logo-a {
+        font-size: 1.5rem;
+    }
+    .layout-header-logo{
+        width: 1.3em;
+    }
+    .layout-header-themeToggler{
+        position: absolute;
+        // right: 80px;
+    }
+    .layout-header {
+        .layout-header-homenavdiv {
+            display: flex;
+        }
+        .layout-header-themeToggler {
+            padding-right: 0;
+            padding-left: 0;
+            right: 15px;
+        }
+    }
+    
+}
+@media (min-width: 800px) {
+    .layout-header-logo-kembali-inpages{
+        left: $calc-layout-header-logo2
+    }
+}
+@include bp("medium"){
+    // .layout-header-markdown{
+    //     padding-left: $calc-layout-header1;
+    // }
+    .layout-header-themeToggler-inpages{
+        right: $calc-layout-header-theme2;
+    }
+    .layout-header-logo-kembali-inpages{
+        left: $calc-layout-header-logo3
+    }
+    // .layout-header-markdown{
+    //     padding-left: $calc-layout-header2;
+    // }
+    // .layout-header-themeToggler-inpages{
+    //     right: $calc-layout-header-theme2;
+    // }
+    .layout-header{
+    .layout-header-themeToggler{
+        padding-right: 0;
+        padding-left: 0;
+        right: 15px;
+    }
+    // .layout-header-homenavdiv{
+    //     display: flex;
+    // }
+}
+}
+@include bp("large"){
+    .layout-header-logo-a{
+        font-size: 1.3rem;
+    }
+    .layout-header-themeToggler{
+        margin: 0;
+        margin-bottom: .1em;
+        right: 30px;
+    }
+    .layout-menudiv{
+        display: none;
+    }
+}
+
+
+

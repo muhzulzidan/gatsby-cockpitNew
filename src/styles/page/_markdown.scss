@@ -1,0 +1,250 @@
+.markdown-basediv{
+  @include themed() {
+    color: t($text);
+    background: t($bg);
+  }
+}
+.markdown-article{
+  @include margin-auto;
+  max-width: 45em;
+  padding: 1em;
+  padding-top: 0;
+  p{
+    text-align: justify;
+  }
+
+  blockquote cite {
+    @include themed (){
+      color: t(text);
+    }
+  }
+  blockquote cite:before {
+    content: '"— "';
+  }
+  
+  @include bp("small"){
+  
+    blockquote {
+      marginLeft: 5em;
+      marginRight: 0;
+      paddingLeft: 5em;
+    }
+  }
+  
+}
+.markdown-h1{
+  font-size: 2em;
+  margin: 0;
+  font-weight: 900;
+}
+.markdown-written{
+  display: block;
+  font-family: 'Lora';
+  font-size: .9em;
+  opacity: .9;
+}
+.markdown-bagikan{
+    display: none;
+}
+
+.markdown-icon{
+  display: flex;
+  margin-top: 1rem;
+  
+  button{
+    margin-left: 1rem;
+    svg{
+      font-size: 2rem;
+      @include themed() {
+        color:t($link);
+      }    
+      &:hover{
+        transition-duration: .2s;
+        @include themed() {
+          color:t($hover);
+        } 
+      }
+    }
+  }
+  button:nth-child(1){
+    margin-left: 0;
+  }
+}
+/* purgecss start ignore */
+.toc {
+  margin-bottom: 1em;
+  border-bottom: .1em solid ;
+  @include themed() {
+    border-color:t($text);
+  }
+    p{
+      margin-bottom: .5em;
+    }
+    ul{
+      margin-left: 1.5em;
+    }
+    a:hover{
+      @include themed(){
+        color: t(hover);
+      }
+    }
+}
+/* purgecss end ignore */
+.markdown-comment-Head{
+  margin: 0;
+  margin-bottom: .6em;
+}
+.markdown-comment-ListDiv{
+  margin-bottom: 1em;
+  padding: 1em;
+}
+.markdown-comment-ListDiv1{
+  margin-bottom: 1em;
+  border: 1px solid;
+  padding: 1em;
+  @include themed(){
+    border-color: t(text);
+  }
+}
+.markdown-comment-ListDiv1 > p{
+  margin: 0;
+}
+.markdown-comment-ListDiv1 > p:first-of-type{
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+@mixin  markdown-nav-hover {
+  transition-duration: .2s;
+  @include themed(){
+    color:t(bg);
+    background-color: t(text);
+  }
+}
+.markdown-nav{
+  box-shadow: 0px 0px 44px -2px rgba(0,0,0,0.23);
+  font-weight: 700;
+  font-size: 1.3em;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  div:hover{
+    @include themed(){
+      background-color: t(link);
+    }
+  }
+  a:hover {
+    @include themed(){
+      color: t(bg);
+    }
+  }
+  a {
+    @include themed(){
+      color: t(link);
+    }
+  }  
+  div {
+    width: 50%;
+    margin: 0;
+    padding: 1em;
+  }
+  .markdown-navMobileAfter > svg, .markdown-navMobilePrev > svg{
+    font-size: 3rem;
+  }
+}
+
+.markdown-navPrev {
+  display: contents;
+
+}
+.markdown-navAfter  {
+  display: contents;
+  
+}
+.markdown-navPrev:hover {
+  @include markdown-nav-hover;
+  
+}
+.markdown-navAfter:hover  {
+  @include markdown-nav-hover;
+}
+
+
+
+@include bp("smaller"){
+  .markdown-bagikan{
+    display: inline-block;
+  }
+}
+@include bp("small"){
+  // .markdown-article{
+  //   max-width: 40em;
+  // }
+  .markdown-nav{
+    .markdown-navMobileAfter, .markdown-navMobilePrev{
+      padding: 0;
+      svg{
+        font-size: inherit;
+      }
+    }
+  }
+}
+@include bp("medium"){
+  // .markdown-article{
+  //   max-width: 48em;
+  // }
+}
+blockquote p {
+  @include themed() {
+    color:t($text)
+  }
+}
+
+
+div .sponsor-gramedia   a {
+  font-family: "Roboto", sans-serif;
+  padding: 1.5em; 
+  font-weight: 800;
+  @include themed() {
+    background-color:t($link);
+    color: t($bg);
+  }
+  &:hover {
+    @include themed() {
+      background-color:t($hover);
+    }
+  }
+}
+
+.sponsor-gramedia{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  justify-content: center;
+  display: flex;
+}
+
+/* sound play podcast */
+
+.rhap_additional-controls {
+  display: none;
+}
+
+.rhap_volume-controls {
+  justify-content: initial;
+}
+
+.rhap_main-controls {
+justify-content: flex-start;
+}
+
+@media screen and (min-width: 600px) {
+  .sponsor-gramedia{
+    
+    justify-content: flex-start;
+    display: flex;
+  }
+  div .sponsor-gramedia   a {
+    padding: 1em;
+  }
+}

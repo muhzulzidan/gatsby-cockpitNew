@@ -1,0 +1,17 @@
+.link{
+    font-size: 1.2em;
+    display: flex;
+    align-self: center;
+    width: max-content;
+    border-radius: 1rem;
+    @include themed() {
+        color:t($link);
+    }
+    &:hover{
+        transition-duration: .2s;
+        @include themed() {
+            color:t($hover);
+        }
+    }
+
+}

@@ -1,0 +1,19 @@
+.home{
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1em;
+}
+.home >a{
+    margin-left: 1rem;
+    box-shadow: none;
+
+    
+}
+.home >a>svg{
+    font-size: 2rem;
+    color: var(--blue);    
+}
+.home >a>svg:hover{
+    transition-duration: .2s;
+    color: var(--red);    
+}

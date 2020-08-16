@@ -1,0 +1,40 @@
+/* purgecss start ignore */
+html, body {
+  
+      @include themed() {
+        color: t($text);
+        background: t($bg);
+      }
+    p {
+      @include themed() {
+        color: t($text);
+      }
+    }
+}
+
+
+/* purgecss end ignore */
+#gatsby-focus-wrapper{
+  @include themed() {
+    color: t($text);
+    background: t($bg);
+  }
+}
+
+a{
+  @include themed(){
+      color: t(text);
+  }
+  &:hover{
+      @include themed{
+          color: t(hover);
+      }
+  }
+}
+ul,ol,li {
+  @include themed(){
+    color: t(text);
+  }
+}
+
+
