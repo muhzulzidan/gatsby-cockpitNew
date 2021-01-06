@@ -21,7 +21,7 @@
 		"@wardpeet/gatsby-plugin-sourcemap-explorer": "0.0.3",
 		"@welldone-software/why-did-you-render": "^4.2.7",
 		"apollo-client": "^2.6.10",
-		"axios": "^0.19.2",
+		"axios": "^0.21.1",
 		"babel-preset-gatsby-package": "^0.4.6",
 		"bluebird": "^3.7.2",
 		"body-scroll-lock": "^3.0.3",
