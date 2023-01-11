@@ -90,7 +90,7 @@
 		"gatsby-remark-table-of-contents": "0.0.9",
 		"gatsby-source-filesystem": "^2.3.14",
 		"gatsby-source-graphql": "^2.5.7",
-		"gatsby-transformer-remark": "^2.8.19",
+		"gatsby-transformer-remark": "^5.25.1",
 		"gatsby-transformer-sharp": "^2.5.7",
 		"googleapis": "^52.1.0",
 		"graphql-tag": "^2.10.3",
